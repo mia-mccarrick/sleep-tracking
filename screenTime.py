@@ -5,7 +5,7 @@ import pytz
 # Load the CSV file
 df = pd.read_csv('/Users/miamccarrick/screenTime.csv')
 
-
+#Used ChatGPT to help convert to EST
 # Define a function to convert UTC to EST
 def convert_utc_to_est(timestamp):
     # Convert the timestamp to a datetime object (UTC)
