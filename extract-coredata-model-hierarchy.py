@@ -1,3 +1,6 @@
+#Credit for the below code: https://github.com/FelixKohlhas/ScreenTime2CSV/tree/main
+#The below code is directly taken from that repo
+
 #!/usr/bin/env python
 
 # ChatGPT Ref: https://chat.openai.com/c/24090115-3356-40f3-9c6f-50ee84c6e48f
