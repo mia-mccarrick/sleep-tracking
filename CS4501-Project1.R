@@ -57,7 +57,7 @@ ggplot(night_data, aes(x = sleep_duration, fill = day_type)) +
   theme_minimal()
 
 #Visualization 2: Box Plot to show sleep/wake time distribution
-  ggplot(night_data_long, aes(x = day_of_week, y = time_relative, fill = time_type)) +
+ ggplot(night_data_long, aes(x = day_of_week, y = time_relative, fill = time_type)) +
     geom_boxplot(alpha = 0.8) +
     labs(
       title = "Sleep Time and Wake Up Time Distribution",
@@ -67,9 +67,12 @@ ggplot(night_data, aes(x = sleep_duration, fill = day_type)) +
     scale_fill_manual(values = c("sleep_time_relative" = "#2a4982", "wake_up_time_relative" = "#f5d30f"),
                       labels = c("Fall Asleep Time", "Wake Up Time")) +
     scale_y_continuous(
-      breaks = seq(0, 960, by = 60),  # Set breaks at every 60 minutes (1 hour)
+      breaks = seq(0, 960, by = 60),  
       labels = c("8:00PM", "9:00PM", "10:00PM", "11:00PM", "12:00AM", "1:00AM", "2:00AM", "3:00AM",
                  "4:00AM", "5:00AM", "6:00AM", "7:00AM", "8:00AM", "9:00AM", "10:00AM", "11:00AM", "12:00PM")
+    ) +
+    scale_x_discrete(
+      limits = c("Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat")  
     ) +
     theme_minimal() +
     theme(
@@ -78,3 +81,4 @@ ggplot(night_data, aes(x = sleep_duration, fill = day_type)) +
       legend.title = element_blank(),  # Remove legend title
       legend.position = "top"
     )
+  
